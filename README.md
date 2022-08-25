@@ -1,5 +1,5 @@
 
-<h1 align="center">Tombs of Amascut Puzzle Solver<img src=imgs/Ba-Ba_icon.ico></h1>
+<h1 align="center">Tombs of Amascut Puzzle Solver   <img src="imgs/Ba-Ba_icon.ico" width="50" height="50" ></h1>
 <p align="center">A solver for the modified LightOut puzzle found in the Path of Scabaras within the raid.</p>
 
 <p align="center">
