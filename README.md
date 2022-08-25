@@ -14,7 +14,7 @@ This is a personal project used for personal needs. It is not thoroughly error t
 
 ### Installation
 
-Simply download the executable above and run on your machine. The source code used for the compiling of this exectuable (compiled through [Auto PY to EXE](https://github.com/brentvollebregt/auto-py-to-exe)) is available in the [folder source](source)
+Simply download the executable above and run on your machine. The source code used for the compiling of this exectuable (compiled through [Auto PY to EXE](https://github.com/brentvollebregt/auto-py-to-exe)) is available [here](source/toa_solver.py)
 
 ### Solving the Puzzle
 
