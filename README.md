@@ -16,7 +16,7 @@ Created using intellectual property belonging to Jagex Limited under the terms o
 
 ### Installation
 
-Simply download the executable above and run on your machine. The source code used for the compiling of this exectuable (compiled through [Auto PY to EXE](https://github.com/brentvollebregt/auto-py-to-exe)) is available [here](source/toa_solver.py)
+Simply download the executable above and run on your machine. The source code used for the compiling of this exectuable (compiled through [PyInstaller](https://pyinstaller.org/en/stable/index.html)) is available [here](source/toa_solver.py) and the build output from PyInstaller is available [here](build).
 
 ### Solving the Puzzle
 
