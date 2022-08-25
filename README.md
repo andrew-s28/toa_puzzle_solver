@@ -37,7 +37,7 @@ The puzzle in this game is adapted from a similar game called ["Lights Out"](htt
 However, some adapting was needed. First and foremost, the lack of a center tile meant that the coefficient matrix had to be updated. This was relatively easy for a 9x9 matrix and I did it by hand. The resulting matrix is: 
 
 <p align="center">
-    <img src=imgs/CodeCogsEqn.pdf>
+    <img src=imgs/CodeCogsEqn.png>
 </p>
 
 Then the system of equations was solved using numpy.linalg.solve. However, this function works in real space while the matrix is supposed to be a (0,1) matrix with integer only coefficients. However, integer only matrix solutions are not easy computationally. Thus, I solved the system of equations in real space before making use of some side-steps to get back to a (0,1) matrix solution which tells which buttons need to be pressed. To do this, I first turned the decimal results from the real space solution into fractions before getting their denominators. Then I brought the fractions to a common factor and multiplied through to get integer solutions. This solution will return some buttons which need to be pressed twice, that is returned to their original state. So the final step is to take mod 2 on this matrix (while also rounding to get rid of some floating-point weirdness) to get only those buttons that need to be pressed an odd number of times. 
