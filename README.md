@@ -24,9 +24,14 @@ Simply download the executable above and run on your machine. The source code us
     <img src=imgs/demo1.PNG>
 </p>
 
-Highlight the tiles that are in the tomb. Orientation does not matter, highlight however makes sense to you! When the red tiles match the highlighted tiles from the raid, click solve and the solution will highlight in red the tiles you need to step on to solve the puzzle. You can verify this by entering it in the above grid, as it will now behave like the in-game puzzle. 
-
-To restart, simply click reset and re-do the process from above. 
+1. Highlight the tiles that are in the tomb. Orientation does not matter, highlight however makes sense to you!
+2. When the red tiles match the highlighted tiles from the raid, click solve.
+3. The solution will now be highlighted in red the tiles below the solve button you need to step on to solve the puzzle. 
+    <p align="center">
+        <img src=imgs/demo2.PNG>
+    </p>
+4. You can verify this by entering it in the above grid, as the top puzzle will now behave like the in-game puzzle.
+5. To restart the process, simply click reset and re-do the process from above.
 
 ## The Math Behind It
 
