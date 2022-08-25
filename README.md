@@ -21,7 +21,7 @@ Simply download the executable in the dist folder found [here](dist) and run on 
 ### Solving the Puzzle
 
 <p align="center">
-    <img src=imgs/demo1.PNG>
+    <img src=imgs/demo_1.PNG>
 </p>
 
 1. Red tiles mean the tile is off, blue tiles mean the tile is on. Highlight those that are on in the tomb blue in the program. 
@@ -30,7 +30,7 @@ Simply download the executable in the dist folder found [here](dist) and run on 
 3. The solution will now highlight in blue the tiles needed you need to step on to solve the puzzle. 
     - It does not matter what order you enter the solution, as the solution is commutative.  
     <p align="center">
-        <img src=imgs/demo2.PNG>
+        <img src=imgs/demo_2.PNG>
     </p>
 4. You can verify this by entering it in the above grid, as the top puzzle will now behave like the in-game puzzle.
 5. To restart the process, simply click reset and re-do the process from above.
