@@ -45,7 +45,7 @@ The puzzle in this game is adapted from a similar game called ["Lights Out"](htt
 However, some adapting was needed. First and foremost, the lack of a center tile meant that the coefficient matrix (called _A_) had to be updated. Each 3x3 coefficient matrix (that is, how clicking each tile causes other tiles to react) was laid end-to-end and stacked on top of on another. This was relatively easy for a 9x9 matrix and so I did it by hand. The other two matrices, _x_, the variable matrix, and _L_, the tile matrix, were easy to adapt by simply shortening their length by one. _L_ is defined by the initial tiles where, counting from the top left across then down, a one corresponds to an "on" tile and a zero to an "off" tile. These matrices are shown below, with _L_ using the tiles from the previous section as an example.
 
 <p align="center">
-    <img src=imgs/CodeCogsEqn.png>
+    <img src=imgs/CodeCogsEqn1.png>
 </p>
 
 The system of equations we are interested in solving is given by _Ax=L_, which can be solved easily in teh real number space with some basic numpy functionality. Each entry in the 8x1 matrix solution is the number of times needed to press each button to solve the puzzle. Unfortunately, in the real number space we get weird things like 0.33 button presses. This is because the linear algebra solution is designed to work in (0,1) integer space (see the WolframAlpha article for more details), and integer linear algebra is quite a bit harder than in the reals. 
