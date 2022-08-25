@@ -1,5 +1,5 @@
 
-<h1 align="center">Tombs of Amascut Puzzle Solver</h1>
+<h1 align="center">Tombs of Amascut Puzzle Solver<img src=imgs/Ba-Ba_icon.ico></h1>
 <p align="center">A solver for the modified LightOut puzzle found in the Path of Scabaras within the raid.</p>
 
 <p align="center">
@@ -9,6 +9,8 @@
 ## Disclaimer
 
 This is a personal project used for personal needs. It is not thoroughly error tested nor is it guarenteed to work on your operating system (my personal OS is Windows 10, so this is the best bet). Use at your own risk, or make it better! 
+
+Created using intellectual property belonging to Jagex Limited under the terms of Jagex's Fan Content Policy. This content is not endorsed by or affiliated with Jagex.
 
 ## Usage
 
@@ -42,5 +44,5 @@ However, some adapting was needed. First and foremost, the lack of a center tile
 
 Then the system of equations was solved using numpy.linalg.solve. However, this function works in real space while the matrix is supposed to be a (0,1) matrix with integer only coefficients. However, integer only matrix solutions are not easy computationally. Thus, I solved the system of equations in real space before making use of some side-steps to get back to a (0,1) matrix solution which tells which buttons need to be pressed. To do this, I first turned the decimal results from the real space solution into fractions before getting their denominators. Then I brought the fractions to a common factor and multiplied through to get integer solutions. This solution will return some buttons which need to be pressed twice, that is returned to their original state. So the final step is to take mod 2 on this matrix (while also rounding to get rid of some floating-point weirdness) to get only those buttons that need to be pressed an odd number of times. 
 
-The returned matrix will be a length 8 matrix corresponding to the buttons that need to be pressed, counting across then down from the top left first. \
+The returned matrix will be a length 8 matrix corresponding to the buttons that need to be pressed, counting across then down from the top left first.
 
