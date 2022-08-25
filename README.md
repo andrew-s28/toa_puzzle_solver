@@ -24,9 +24,10 @@ Simply download the executable in the dist folder found [here](dist) and run on 
     <img src=imgs/demo1.PNG>
 </p>
 
-1. Highlight the tiles that are in the tomb. Orientation does not matter, highlight however makes sense to you!
-2. When the red tiles match the non-highlighted tiles from the raid, click solve.
-3. The solution will now be highlighted in red the tiles below the solve button you need to step on to solve the puzzle. 
+1. Red tiles mean the tile is off, blue tiles mean the tile is on. Highlight those that are on in the tomb blue in the program. 
+    - Orientation does not matter, highlight however makes sense to you!
+2. When the blue tiles match the highlighted tiles from the raid, click solve.
+3. The solution will now highlight in blue the tiles needed you need to step on to solve the puzzle. 
     - It does not matter what order you enter the solution, as the solution is commutative.  
     <p align="center">
         <img src=imgs/demo2.PNG>
