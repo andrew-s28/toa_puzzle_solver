@@ -2,14 +2,11 @@
 """
 Created on Wed Aug 24 18:16:13 2022
 
-@author: asche
+@author: andrew-s28
 """
 import numpy as np
-import random
 import tkinter as tk
-from tkinter import  *
 from fractions import Fraction
-
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -143,5 +140,25 @@ class Application(tk.Frame):
 
 
 root = tk.Tk()
+
+#get screen size
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+window_width = int(screen_width/5)
+window_height = int(screen_height/2)
+#fix to center and resize based on screen
+center_x = int(screen_width/2 - window_width / 2)
+center_y = int(screen_height/2 - window_height / 2)
+root.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
+
+
+#create grid for window
+root.grid_rowconfigure(0, weight=1)
+root.grid_columnconfigure(0, weight=1)
+
+#set title
+root.title('TOA Puzzle Solver')
+
+#run
 app = Application(master=root)
 app.mainloop()
