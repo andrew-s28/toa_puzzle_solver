@@ -29,7 +29,7 @@ To restart, simply click reset and re-do the process from above.
 ## The Math Behind It
 
 <p align="center">
-    <img src=imgs/lightsoutillustration.PNG>
+    <img src=imgs/lightsoutillustration.png>
 </p>
 
 The puzzle in this game is adapted from a similar game called ["Lights Out"](https://en.wikipedia.org/wiki/Lights_Out_(game)), although the middle square in this case has been removed. In either case, the math remains the same. I solve this puzzle by using a solving a linear system of equations which is based on a great [WolframAlpha article by Margherita Barile](https://mathworld.wolfram.com/LightsOutPuzzle.html). The basics of how and why this works are laid out in this work, so I will not be re-explaining that here. 
