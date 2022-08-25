@@ -16,7 +16,7 @@ Created using intellectual property belonging to Jagex Limited under the terms o
 
 ### Installation
 
-Simply download the executable above and run on your machine. The source code used for the compiling of this exectuable (compiled through [PyInstaller](https://pyinstaller.org/en/stable/index.html)) is available [here](source/toa_solver.py) and the build output from PyInstaller is available [here](build).
+Simply download the executable above and run on your machine. The source code used for the compiling of this exectuable (compiled through [PyInstaller](https://pyinstaller.org/en/stable/index.html)) is available [here](source/toa_solver.py) and the build output from PyInstaller is available [here](build), so that you can have a little more trust running a .exe from some random person on the internet :D.
 
 ### Solving the Puzzle
 
