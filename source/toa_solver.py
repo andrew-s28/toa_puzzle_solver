@@ -2,7 +2,7 @@
 """
 Created on Wed Aug 24 18:16:13 2022
 
-@author: andrew-s28
+@author: asche
 """
 import numpy as np
 import tkinter as tk
@@ -43,12 +43,12 @@ class Application(tk.Frame):
                 yPos = 2
             if self.light_state[floor] == 0:
                 self.button[floor] = tk.Button(self, width=3, text=floor+1, 
-                                               padx = 5, pady=5, bg='powder blue',
+                                               padx = 5, pady=5, bg='tomato',
                     command = lambda f=floor: self.pressed(f))
                 self.button[floor].grid(row=xPos, column =yPos)
             elif self.light_state[floor] == 1:
                 self.button[floor] = tk.Button(self, width=3, text=floor+1,
-                                               padx = 5, pady=5, bg='powder blue',
+                                               padx = 5, pady=5, bg='tomato',
                     command = lambda f=floor: self.pressed(f))
                 self.button[floor].grid(row=xPos, column =yPos)
             yPos = yPos +1
@@ -71,11 +71,11 @@ class Application(tk.Frame):
                 yPos = 2
             if self.light_state[floor] == 0:
                 self.output[floor] = tk.Button(self, width=3, text=floor+1, 
-                                               padx = 5, pady=5, bg='powder blue')
+                                               padx = 5, pady=5, bg='tomato')
                 self.output[floor].grid(row=xPos, column =yPos)
             elif self.output[floor] == 1:
                 self.button[floor] = tk.Button(self, width=3, text=floor+1, 
-                                               padx = 5, pady=5, bg='tomato')
+                                               padx = 5, pady=5, bg='powder blue')
                 self.output[floor].grid(row=xPos, column =yPos)
             yPos = yPos +1
 
@@ -106,9 +106,9 @@ class Application(tk.Frame):
         #update output buttons
         for floor in range(8): 
             if solution[floor] == 0:
-                self.output[floor].configure(bg='powder blue')
-            elif solution[floor] == 1:
                 self.output[floor].configure(bg='tomato')
+            elif solution[floor] == 1:
+                self.output[floor].configure(bg='powder blue')
         self.solved = True
             
 
@@ -116,18 +116,19 @@ class Application(tk.Frame):
         #reset output buttons and return behavior to original
         floors = [i for i in range(8)]
         for floor in floors:
-            self.output[floor].configure(bg='powder blue')
+            self.output[floor].configure(bg='tomato')
+            self.button[floor].configure(bg='tomato')
         self.solved = False
 
 
     def pressed(self, index):
         #update buttons either individually (if not solved yet)
         if not self.solved:
-            if self.button[index].cget('bg') == 'tomato':   # Check current color
-                self.button[index].configure(bg='powder blue')
-                self.light_state[index] = 0
-            elif self.button[index].cget('bg') == 'powder blue':   # Check current color
+            if self.button[index].cget('bg') == 'powder blue':   # Check current color
                 self.button[index].configure(bg='tomato')
+                self.light_state[index] = 0
+            elif self.button[index].cget('bg') == 'tomato':   # Check current color
+                self.button[index].configure(bg='powder blue')
                 self.light_state[index] = 1
         #or update in groups as in the puzzle (if solved)
         if self.solved:
