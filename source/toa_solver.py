@@ -95,7 +95,7 @@ class Application(tk.Frame):
         #https://mathworld.wolfram.com/LightsOutPuzzle.html
         self.solved = True
         #solve system of equations in real number space
-        temp = np.linalg.solve(self.coeff_mat, self.light_state)
+        temp = np.linalg.solve(self.coeff_mat, 1-self.light_state)
         #convert to fractions
         sol_frac = [Fraction(x).limit_denominator() for x in temp]
         #reduce fractions by gcd of denominator
@@ -118,6 +118,7 @@ class Application(tk.Frame):
         for floor in floors:
             self.output[floor].configure(bg='tomato')
             self.button[floor].configure(bg='tomato')
+        self.light_state = np.zeros(8)
         self.solved = False
 
 
@@ -133,12 +134,13 @@ class Application(tk.Frame):
         #or update in groups as in the puzzle (if solved)
         if self.solved:
             self.light_state[np.where(self.coeff_mat[index])] =  1-self.light_state[np.where(self.coeff_mat[index])]
-            for floor in range(8):
-                if self.light_state[floor] == 0:
-                    self.button[floor].configure(bg='powder blue')
-                elif self.light_state[floor] == 1:
+            for floor in np.where(self.coeff_mat[index])[0]:
+                if self.button[floor].cget('bg') == 'powder blue':   # Check current color
                     self.button[floor].configure(bg='tomato')
-
+                    self.light_state[floor] = 0
+                elif self.button[floor].cget('bg') == 'tomato':   # Check current color
+                    self.button[floor].configure(bg='powder blue')
+                    self.light_state[floor] = 1
 
 root = tk.Tk()
 
